@@ -1,0 +1,1 @@
+na aba historico, trazer todas as mensalidades pagas e a que está em aberto, ai no proprio grid, clicar com o botão direito em cima da mensalidade em aberto e quitar ela. Ai irá buscar tudo que existe na tabela mensalidades para cada cliente, e mostrar no grid. 

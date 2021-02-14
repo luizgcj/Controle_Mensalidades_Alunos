@@ -1,0 +1,16 @@
+program GestaoAluno;
+
+uses
+  Vcl.Forms,
+  Principal in 'Principal.pas' {FrPrincipal},
+  CadCliente in 'CadCliente.pas' {FrCadCliente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrPrincipal, FrPrincipal);
+  Application.CreateForm(TFrCadCliente, FrCadCliente);
+  Application.Run;
+end.

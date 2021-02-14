@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/02/14 20:39:24.000.809,=C:\Users\luiz_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 09:30:56.000.935,=C:\Users\luiz_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 09:31:24.000.692,C:\Users\luiz_\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\luiz_\Desktop\ProjetoFernanda\Principal.dfm</Transaction>
+    <Transaction>2019/03/24 09:31:24.000.692,C:\Users\luiz_\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\luiz_\Desktop\ProjetoFernanda\Principal.pas</Transaction>
+    <Transaction>2019/03/24 09:32:16.000.693,C:\Users\luiz_\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\luiz_\Desktop\ProjetoFernanda\GestaoAluno.dproj</Transaction>
+    <Transaction>2019/03/24 09:43:17.000.272,=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 09:47:12.000.474,C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas=C:\Users\luiz_\Desktop\ProjetoFernanda\CadCliente.pas</Transaction>
+    <Transaction>2019/03/24 09:47:12.000.474,C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.dfm=C:\Users\luiz_\Desktop\ProjetoFernanda\CadCliente.dfm</Transaction>
+    <Transaction>2019/03/24 10:31:41.000.004,=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 10:32:57.000.816,C:\Users\luiz_\Desktop\ProjetoFernanda\ModulodeDados.dfm=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.dfm</Transaction>
+    <Transaction>2019/03/24 10:32:57.000.816,C:\Users\luiz_\Desktop\ProjetoFernanda\ModulodeDados.pas=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 10:59:37.000.667,=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 11:07:17.000.430,=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+    <Transaction>2019/03/24 11:07:27.000.207,C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.dfm=C:\Users\luiz_\Desktop\ProjetoFernanda\CadCliente.dfm</Transaction>
+    <Transaction>2019/03/24 11:07:27.000.207,C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas=C:\Users\luiz_\Desktop\ProjetoFernanda\CadCliente.pas</Transaction>
+    <Transaction>2019/04/03 19:33:28.000.716,=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+    <Transaction>2019/04/03 19:33:40.000.040,C:\Users\luiz_\Desktop\ProjetoFernanda\Funcoes.pas=C:\Users\luiz_\Desktop\ProjetoFernanda\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

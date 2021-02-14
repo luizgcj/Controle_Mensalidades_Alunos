@@ -1,0 +1,146 @@
+object FrListaCadCliente: TFrListaCadCliente
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Lista Cadastro de Cliente'
+  ClientHeight = 523
+  ClientWidth = 831
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 831
+    Height = 79
+    Align = alTop
+    TabOrder = 0
+    object btnIncluir: TSpeedButton
+      Left = 8
+      Top = 0
+      Width = 32
+      Height = 30
+      Hint = 'Clique para cadastrar um novo Cliente'
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnIncluirClick
+    end
+    object btnEditar: TSpeedButton
+      Left = 43
+      Top = 0
+      Width = 32
+      Height = 30
+      Hint = 'Clique para editar o cliente selecionado'
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object btnExcluir: TSpeedButton
+      Left = 78
+      Top = 0
+      Width = 32
+      Height = 30
+      Hint = 'Clique para excluir o cadastro de cliente selecionado'
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object btnFechar: TSpeedButton
+      Left = 113
+      Top = 0
+      Width = 32
+      Height = 30
+      Hint = 'Clique para sair do cadastro de cliente'
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label1: TLabel
+      Left = 8
+      Top = 60
+      Width = 50
+      Height = 13
+      Caption = 'Pesquisar:'
+    end
+    object btnPesquisar: TSpeedButton
+      Left = 559
+      Top = 54
+      Width = 23
+      Height = 22
+    end
+    object Edit1: TEdit
+      Left = 64
+      Top = 55
+      Width = 489
+      Height = 21
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 79
+    Width = 831
+    Height = 444
+    Align = alClient
+    TabOrder = 1
+    object DbListaClientes: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 829
+      Height = 442
+      Align = alClient
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGO'
+          Title.Caption = 'C'#243'digo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOME'
+          Title.Caption = 'Nome'
+          Width = 300
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ENDERECO'
+          Title.Caption = 'Endere'#231'o'
+          Width = 300
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMERO'
+          Title.Caption = 'N'#250'mero'
+          Width = 70
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CIDADE'
+          Title.Caption = 'Cidade'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UF'
+          Width = 70
+          Visible = True
+        end>
+    end
+  end
+end

@@ -1,0 +1,40 @@
+unit Funcoes;
+
+
+interface
+
+Uses SysUtils, DBCtrls;
+
+function AplicMascaraTelefone(iTelefone:String):STring;
+
+implementation
+
+procedure Carregamascaratelefone(Telefone : TMaskedit; key:iNTEGER);
+var
+  campo : string;
+begin
+  if (key <> 37) and (key <> 38) and (key <> 39)  and (key <> 40) and (key <> 8) then
+  begin
+    Telefone.EditMask := '';
+    campo := trim(Telefone.Text);
+    Telefone.Text := '';
+     if (Length(trim(campo)) =10) then
+        Telefone.EditMask := '!\(##\) ####\-####;0; ';
+
+     if (Length(trim(campo)) >10) then
+      Telefone.EditMask := '!\(##\) #####\-####;0; ';
+
+     if (Length(trim(campo)) =9) then
+        Telefone.EditMask := '!\(##\) #####\-####;0; ';
+
+
+     if (Length(trim(campo)) <=8) then
+        Telefone.EditMask := '!\(##\) ####\-####;0; ';
+
+      Telefone.Text := campo;
+//    Limpamascaratelefone(Telefone,key)
+  END;
+end;
+
+
+end.

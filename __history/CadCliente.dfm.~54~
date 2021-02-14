@@ -1,0 +1,359 @@
+object FrCadCliente: TFrCadCliente
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Cadastro de Cliente'
+  ClientHeight = 418
+  ClientWidth = 706
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 706
+    Height = 377
+    ActivePage = Dados
+    Align = alClient
+    TabOrder = 0
+    TabPosition = tpBottom
+    object Dados: TTabSheet
+      Caption = 'Dados Cadastrais'
+      object Label2: TLabel
+        Left = 32
+        Top = 11
+        Width = 37
+        Height = 13
+        Caption = 'C'#243'digo:'
+      end
+      object Label3: TLabel
+        Left = 38
+        Top = 44
+        Width = 31
+        Height = 13
+        Caption = 'Nome:'
+      end
+      object Label4: TLabel
+        Left = 20
+        Top = 78
+        Width = 49
+        Height = 13
+        Caption = 'Endere'#231'o:'
+      end
+      object Label5: TLabel
+        Left = 448
+        Top = 78
+        Width = 41
+        Height = 13
+        Caption = 'N'#250'mero:'
+      end
+      object Label6: TLabel
+        Left = 467
+        Top = 146
+        Width = 23
+        Height = 13
+        Caption = 'CEP:'
+      end
+      object Label7: TLabel
+        Left = 46
+        Top = 247
+        Width = 23
+        Height = 13
+        Caption = 'CPF:'
+      end
+      object Label8: TLabel
+        Left = 187
+        Top = 247
+        Width = 18
+        Height = 13
+        Caption = 'RG:'
+      end
+      object Label9: TLabel
+        Left = 32
+        Top = 179
+        Width = 37
+        Height = 13
+        Caption = 'Cidade:'
+      end
+      object Label10: TLabel
+        Left = 473
+        Top = 179
+        Width = 17
+        Height = 13
+        Caption = 'UF:'
+      end
+      object Label1: TLabel
+        Left = 10
+        Top = 213
+        Width = 59
+        Height = 13
+        Caption = 'Estado Civil:'
+      end
+      object Label11: TLabel
+        Left = 227
+        Top = 213
+        Width = 28
+        Height = 13
+        Caption = 'Sexo:'
+      end
+      object Label12: TLabel
+        Left = 23
+        Top = 281
+        Width = 46
+        Height = 13
+        Caption = 'Telefone:'
+      end
+      object Label13: TLabel
+        Left = 213
+        Top = 281
+        Width = 37
+        Height = 13
+        Caption = 'Celular:'
+      end
+      object Label14: TLabel
+        Left = 41
+        Top = 315
+        Width = 28
+        Height = 13
+        Caption = 'Email:'
+      end
+      object Label15: TLabel
+        Left = 0
+        Top = 146
+        Width = 69
+        Height = 13
+        Caption = 'Complemento:'
+      end
+      object Label16: TLabel
+        Left = 392
+        Top = 213
+        Width = 100
+        Height = 13
+        Caption = 'Data de Nascimento:'
+      end
+      object Label17: TLabel
+        Left = 37
+        Top = 112
+        Width = 32
+        Height = 13
+        Caption = 'Bairro:'
+      end
+      object cbSexo: TComboBox
+        Left = 261
+        Top = 209
+        Width = 116
+        Height = 21
+        Style = csDropDownList
+        TabOrder = 10
+        Items.Strings = (
+          'MASCULINO'
+          'FEMININO')
+      end
+      object cbEstadoCivil: TComboBox
+        Left = 74
+        Top = 209
+        Width = 145
+        Height = 21
+        Style = csDropDownList
+        TabOrder = 9
+        Items.Strings = (
+          'SOLTEIRO'
+          'CASADO'
+          'VIUVO'
+          'DIVORCIADO')
+      end
+      object edtRG: TEdit
+        Left = 211
+        Top = 243
+        Width = 165
+        Height = 21
+        TabOrder = 13
+      end
+      object mktCPF: TMaskEdit
+        Left = 74
+        Top = 243
+        Width = 100
+        Height = 21
+        EditMask = '!999.999.999-00;1;_'
+        MaxLength = 14
+        TabOrder = 12
+        Text = '   .   .   -  '
+      end
+      object mktCep: TMaskEdit
+        Left = 496
+        Top = 142
+        Width = 72
+        Height = 21
+        EditMask = '00.000\-999;1;_'
+        MaxLength = 10
+        TabOrder = 6
+        Text = '  .   -   '
+      end
+      object edtUF: TEdit
+        Left = 496
+        Top = 175
+        Width = 33
+        Height = 21
+        ReadOnly = True
+        TabOrder = 8
+      end
+      object edtNumero: TEdit
+        Left = 496
+        Top = 74
+        Width = 72
+        Height = 21
+        TabOrder = 3
+      end
+      object edtEndereco: TEdit
+        Left = 74
+        Top = 74
+        Width = 368
+        Height = 21
+        TabOrder = 2
+      end
+      object edtNome: TEdit
+        Left = 74
+        Top = 40
+        Width = 368
+        Height = 21
+        TabOrder = 1
+      end
+      object edtCodigo: TEdit
+        Left = 74
+        Top = 7
+        Width = 86
+        Height = 21
+        Enabled = False
+        TabOrder = 0
+      end
+      object cbCidade: TComboBox
+        Left = 74
+        Top = 175
+        Width = 368
+        Height = 21
+        TabOrder = 7
+        OnChange = cbCidadeChange
+      end
+      object mktTelefone: TMaskEdit
+        Left = 75
+        Top = 277
+        Width = 111
+        Height = 21
+        EditMask = '(##) ####-####'
+        MaxLength = 14
+        TabOrder = 14
+        Text = '(  )     -    '
+        OnEnter = mktTelefoneEnter
+        OnExit = mktTelefoneExit
+      end
+      object mktCelular: TMaskEdit
+        Left = 256
+        Top = 277
+        Width = 115
+        Height = 21
+        EditMask = '(##) ####-####'
+        MaxLength = 14
+        TabOrder = 15
+        Text = '(  )     -    '
+        OnEnter = mktCelularEnter
+        OnExit = mktCelularExit
+      end
+      object edtEmail: TEdit
+        Left = 74
+        Top = 311
+        Width = 303
+        Height = 21
+        TabOrder = 16
+      end
+      object edtComplemento: TEdit
+        Left = 74
+        Top = 142
+        Width = 368
+        Height = 21
+        TabOrder = 5
+      end
+      object mktDataNascimento: TMaskEdit
+        Left = 504
+        Top = 209
+        Width = 64
+        Height = 21
+        EditMask = '!99/99/0000;1;_'
+        MaxLength = 10
+        TabOrder = 11
+        Text = '  /  /    '
+      end
+      object edtBairro: TEdit
+        Left = 74
+        Top = 108
+        Width = 368
+        Height = 21
+        TabOrder = 4
+      end
+    end
+    object Historico: TTabSheet
+      Caption = 'Hist'#243'rico'
+      ImageIndex = 1
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 377
+    Width = 706
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    object btnGravar: TBitBtn
+      Left = 16
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Gravar'
+      TabOrder = 0
+      OnClick = btnGravarClick
+    end
+    object btnExcluir: TBitBtn
+      Left = 109
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 1
+      OnClick = btnExcluirClick
+    end
+    object btnDesistir: TBitBtn
+      Left = 202
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Desistir'
+      TabOrder = 2
+      OnClick = btnDesistirClick
+    end
+    object btnAnterior: TBitBtn
+      Left = 295
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Anterior'
+      TabOrder = 3
+    end
+    object btnProximo: TBitBtn
+      Left = 388
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Pr'#243'ximo'
+      TabOrder = 4
+    end
+  end
+end

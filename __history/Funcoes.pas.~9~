@@ -1,0 +1,42 @@
+unit Funcoes;
+
+
+interface
+
+Uses SysUtils, Vcl.Mask;
+
+Type  TFuncoes = class abstract
+  public
+    class procedure CarregaMascaraTelefone(Telefone : TMaskedit; key:Integer);
+end;
+
+implementation
+
+class procedure CarregaMascaraTelefone(Telefone : TMaskedit; key:Integer);
+var
+  campo : string;
+begin
+  if (key <> 37) and (key <> 38) and (key <> 39)  and (key <> 40) and (key <> 8) then
+  begin
+    Telefone.EditMask := '';
+    campo := trim(Telefone.Text);
+    Telefone.Text := '';
+     if (Length(trim(campo)) =10) then
+        Telefone.EditMask := '!\(##\) ####\-####;0; ';
+
+     if (Length(trim(campo)) >10) then
+      Telefone.EditMask := '!\(##\) #####\-####;0; ';
+
+     if (Length(trim(campo)) =9) then
+        Telefone.EditMask := '!\(##\) #####\-####;0; ';
+
+
+     if (Length(trim(campo)) <=8) then
+        Telefone.EditMask := '!\(##\) ####\-####;0; ';
+
+      Telefone.Text := campo;
+  END;
+end;
+
+
+end.

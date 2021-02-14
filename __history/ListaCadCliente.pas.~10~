@@ -1,0 +1,94 @@
+unit ListaCadCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, System.ImageList,
+  Vcl.ImgList, Vcl.StdCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, FireDac.Comp.Client,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet;
+
+type
+  TFrListaCadCliente = class(TForm)
+    Panel1: TPanel;
+    btnIncluir: TSpeedButton;
+    btnEditar: TSpeedButton;
+    btnExcluir: TSpeedButton;
+    btnFechar: TSpeedButton;
+    Panel2: TPanel;
+    DbListaClientes: TDBGrid;
+    Label1: TLabel;
+    Edit1: TEdit;
+    btnPesquisar: TSpeedButton;
+    procedure FormShow(Sender: TObject);
+    procedure btnIncluirClick(Sender: TObject);
+    procedure DbListaClientesDblClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure ConsultaClientes;
+  public
+    { Public declarations }
+  end;
+
+var
+  FrListaCadCliente: TFrListaCadCliente;
+
+implementation
+
+{$R *.dfm}
+
+uses Principal, ModulodeDados, CadCliente, Funcoes;
+
+procedure TFrListaCadCliente.FormShow(Sender: TObject);
+begin
+  ConsultaClientes();
+end;
+
+procedure TFrListaCadCliente.btnIncluirClick(Sender: TObject);
+begin
+  FrCadCliente := TFrCadCliente.Create(Self);
+  FrCadCliente.edtCodigo.Text := TFuncoes.AutoIncremento('CADCLIENTE','CODIGO',DMDados.FDCBaseDados);
+  FrCadCliente.CarregarCidades();
+  FrCadCliente.ShowModal;
+  FrCadCliente.Release;
+end;
+
+procedure TFrListaCadCliente.ConsultaClientes;
+var
+  DataSource : TDataSource;
+  vQrClientes : TFDQuery;
+begin
+  DataSource := TDataSource.Create(nil);
+  vQrClientes := TFDQuery.Create(nil);
+  vQrClientes.Connection := DMDados.FDCBaseDados;
+
+  DataSource.DataSet := vQrClientes;
+  DbListaClientes.DataSource := DataSource;
+
+  vQrClientes.SQL.Text := 'SELECT CLI.CODIGO, CLI.NOME, CLI.ENDERECO, CLI.NUMERO, CLI.BAIRRO,'
+                        + ' CLI.CPF, CLI.RG, CLI.CEP, CLI.COMPLEMENTO, CLI.TELEFONE, CLI.CELULAR,'
+                        + ' CLI.EMAIL, CLI.SEXO, CLI.ESTADOCIVIL, CLI.DATANASCIMENTO,'
+                        + ' CID.DESCRICAO AS CIDADE, EST.UF'
+                        + ' FROM CADCLIENTE CLI'
+                        + ' INNER JOIN CIDADE CID ON CLI.CIDADE = CID.CODIGO'
+                        + ' INNER JOIN ESTADO EST ON EST.CODIGO = CID.ESTADO'
+                        + ' WHERE CLI.CODIGO > 0';
+  vQrClientes.Open();
+
+
+end;
+
+procedure TFrListaCadCliente.DbListaClientesDblClick(Sender: TObject);
+begin
+  FrCadCliente := TFrCadCliente.Create(Self);
+  FrCadCliente.CarregarCidades();
+  FrCadCliente.AtribuirDados(TFDQuery(DbListaClientes.DataSource.DataSet));
+  FrCadCliente.ShowModal;
+  FrCadCliente.Release;
+
+
+end;
+
+end.
